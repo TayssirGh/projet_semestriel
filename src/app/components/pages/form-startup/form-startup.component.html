@@ -1,0 +1,326 @@
+<html>
+
+<body>
+
+    <div class="main-wrapper">
+
+
+
+
+      <div class="form-wrapper">
+                <div class="image-wrapper">
+             <img src="assets/raise-form.png" alt="image">
+      </div>
+      <form >
+        <h2 class="hello">Welcome to StartBoost!</h2> <br>
+        <p>Join our platform for innovative startups by filling out the form below and start boosting your business today.</p>
+
+          <h2>Company Information :</h2>
+          <div class="mb-5">
+            <label  for="legal-name" class="form-label"> Legal name of company </label>
+            <input
+              required
+              ngModel
+              #legalname="ngModel"
+              type="text"
+              name="legalName"
+              id="legal-name"
+              placeholder="Legal name of company"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="legalname.touched && !legalname.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="business-address" class="form-label"> Business address </label>
+            <input
+            required
+            ngModel
+            #businessAddress="ngModel"
+            type="text"
+            name="businessAddress"
+            id="business-address"
+            placeholder="Business address"
+            class="form-input"
+            />
+            <div class="alert" *ngIf="businessAddress.touched && !businessAddress.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="mailing-address" class="form-label"> Mailing address (if different) </label>
+            <input
+
+              type="text"
+              name="mailing-address"
+              id="mailing-address"
+              placeholder="Mailing address"
+              class="form-input"
+            />
+
+          </div>
+          <div class="mb-5">
+            <label for="phone" class="form-label"> Phone number </label>
+            <input
+              required
+              ngModel
+              #phone="ngModel"
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="phone.touched && !phone.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="email" class="form-label"> Email address </label>
+            <input
+            required
+              ngModel
+              #email="ngModel"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="email.touched && !email.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="forme_juridique" class="form-label">Forme juridique:</label>
+           <select id="forme_juridique" name="formeJuridique" class="form-input" required
+           ngModel
+           #formeJuridique="ngModel" >
+           <option value="sas">SAS</option>
+           <option value="sa">SA</option>
+           <option value="sarl">SARL</option>
+           <option value="snc">SNC</option>
+         </select>
+         <div class="alert" *ngIf="formeJuridique.touched && !formeJuridique.valid">
+          this field is required.
+         </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="website" class="form-label"> Website </label>
+            <input
+              type="text"
+              id="website"
+              placeholder="www.exemple.xyz"
+              class="form-input"
+            />
+          </div>
+          <div class="mb-5">
+            <label for="description"
+            class="form-label">
+
+             Brief description of the company and its products or services
+             </label>
+            <textarea
+            required
+              ngModel
+              #description="ngModel"
+              name="description"
+              id="description"
+              placeholder="Brief description of the company and its products or services"
+              class="form-input"
+            ></textarea>
+            <div class="alert" *ngIf="description.touched && !description.valid">
+              this field is required.
+             </div>
+          </div>
+          <label  class="form-label">Nombre d'employés </label>
+          <div class="flex flex-wrap -mx-3">
+            <div class="w-full sm:w-half px-3">
+              <div class="mb-5">
+                <label for="nb_employes_femmes" class="form-label">Women</label>
+            <input
+            required
+              ngModel
+              #nbEmplyesFemmes="ngModel"
+             type="number"
+             min="0"
+              id="nb_employes_femmes"
+              name="nb_employes_femmes"
+               class="form-input"
+               >
+            <div class="alert" *ngIf="nbEmplyesFemmes.touched && !nbEmplyesFemmes.valid">
+              this field is required.
+             </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-half px-3">
+              <div class="mb-5">
+                <label for="nb_employes_hommes" class="form-label">Men</label>
+           <input
+           required
+              ngModel
+              #nbEmployesHommes="ngModel"
+             type="number"
+             min="0"
+             id="nb_employes_hommes"
+             name="nb_employes_hommes"
+             class="form-input"
+            >
+           <div class="alert" *ngIf="nbEmployesHommes.touched && !nbEmployesHommes.valid">
+            this field is required.
+           </div>
+              </div>
+            </div>
+          </div>
+
+
+              <div class="mb-5">
+                <label for="incorporation-date" class="form-label"> Date of incorporation </label>
+                <input
+                required
+              ngModel
+              #incorporationDate="ngModel"
+                  type="date"
+                  name="incorporation-date"
+                  id="incorporation-date"
+                  class="form-input"
+                />
+                <div class="alert" *ngIf="incorporationDate.touched && !incorporationDate.valid">
+                  this field is required.
+                 </div>
+              </div>
+
+
+
+              <div class="mb-5">
+                <label for="incorporation-state" class="form-label"> State of incorporation </label>
+                <input
+                required
+                ngModel
+                #incorporationState="ngModel"
+                type="text"
+                name="incorporation-state"
+                id="incorporation-state"
+                placeholder="State of incorporation"
+                class="form-input"
+              />
+              <div class="alert" *ngIf="incorporationState.touched && !incorporationState.valid">
+                this field is required.
+               </div>
+            </div>
+
+          <h2>Executive Information:</h2>
+          <div class="mb-5">
+            <label for="ceo-name" class="form-label"> CEO name </label>
+            <input
+              required
+              ngModel
+              #ceoName="ngModel"
+              type="text"
+              name="ceo-name"
+              id="ceo-name"
+              placeholder="CEO name"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="ceoName.touched && !ceoName.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="ceo-email" class="form-label"> CEO email address </label>
+            <input
+            required
+              ngModel
+              #ceoEmail="ngModel"
+              type="email"
+              name="ceo-email"
+              id="ceo-email"
+              placeholder="CEO email address"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="ceoEmail.touched && !ceoEmail.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="ceo-phone" class="form-label"> CEO phone number </label>
+            <input
+            required
+              ngModel
+              #ceoPhone="ngModel"
+              type="text"
+              name="ceo-phone"
+              id="ceo-phone"
+              placeholder="CEO phone number"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="ceoPhone.touched && !ceoPhone.valid">
+              this field is required.
+             </div>
+          </div>
+          <h2>Investment Information:</h2>
+          <div class="mb-5">
+            <label for="investment-amount" class="form-label"> Amount of investment required </label>
+            <input
+              required
+              ngModel
+              #investementAmount="ngModel"
+              type="text"
+              name="investment-amount"
+              id="investment-amount"
+              placeholder="Amount of investment required"
+              class="form-input"
+            />
+            <div class="alert" *ngIf="investementAmount.touched && !investementAmount.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="investment-use" class="form-label"> Intended use of investment </label>
+            <textarea
+            required
+              ngModel
+              #investementUse="ngModel"
+              name="investment-use"
+              id="investment-use"
+              placeholder="Intended use of investment"
+              class="form-input"
+            ></textarea>
+            <div class="alert" *ngIf="investementUse.touched && !investementUse.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <label for="fundraising-stage" class="form-label"> Fundraising stage </label>
+            <select
+            required
+              ngModel
+              #fundraisingStage="ngModel"
+             name="fundraising-stage"
+             id="fundraising-stage"
+             class="form-input"
+            >
+              <option value="seed">Seed</option>
+              <option value="series-a">Series A</option>
+              <option value="series-b">Series B</option>
+              <option value="series-c">Series C</option>
+              <option value="pre-ipo">Pre-IPO</option>
+            </select>
+            <div class="alert" *ngIf="fundraisingStage.touched && !fundraisingStage.valid">
+              this field is required.
+             </div>
+          </div>
+          <div class="mb-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
