@@ -1,1 +1,67 @@
-<p>login works!</p>
+<div class="bgg ">
+    <div class="classCenter">
+        <div class="main">  	
+            <input type="checkbox" id="chk" aria-hidden="true">
+    
+                <div class="signup">
+                    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" >
+                        
+                        <label for="chk" aria-hidden="true">Sign up</label>
+                        <div>
+                            <input type="text" placeholder="Username" formControlName="username">
+                            <div *ngIf="username.touched && username.invalid" class="centerERR">
+                                <mat-error *ngIf="username.errors?.['required']">This field is required.</mat-error> 
+                                <mat-error *ngIf="username.errors?.['minlength']">Username must be at least 3 characters long.</mat-error>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email"  placeholder="Email" formControlName="email" >
+                            <div *ngIf="email.touched && email.invalid" class="centerERR">
+                                <mat-error *ngIf="email.errors?.['required']">This field is required.</mat-error> 
+                                <mat-error *ngIf="email.errors?.['email']">make sure to use a valid email format.</mat-error>
+                            </div> 
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" formControlName="password">
+                            <div *ngIf="password.touched && password.invalid" class="centerERR">
+                                <mat-error *ngIf="password.errors?.['required']">This field is required.</mat-error>
+                                <mat-error *ngIf="password.errors?.['pattern']">Password must be 8+ characters with uppercase, lowercase, and numbers.</mat-error>
+                                <mat-error *ngIf="password.errors?.['maxlength']">Password should not exceed 16 characters. </mat-error>
+                            </div> 
+                         </div>
+                        <div>
+                            <input type="password"  placeholder="Confirm password" formControlName="confirmPassword">
+                            <div *ngIf="confirmPassword.touched && confirmPassword.invalid" class="centerERR">
+                                <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required.</mat-error> 
+                            </div>
+                            <mat-error *ngIf="!confirmPassword.errors?.['required'] && reactiveForm.invalid && reactiveForm.errors?.['confirmPass'] && confirmPassword.touched" class="centerERR">
+                                the passwords do not match.
+                            </mat-error>
+                            
+                        </div>
+                        <div class="select" >
+                            <select formControlName="status">
+                                <option value="raiser">Raiser</option>
+                                <option value="investor">Investor</option>
+                            </select>
+                        </div>
+                        <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid">
+                    </form>
+                </div>
+    
+                <div class="login">
+                    <form>
+                        <label for="chk" aria-hidden="true" class="pt">Login</label>
+                        <div>
+                            <input type="email"  name="email" placeholder="Email" >
+                        </div>
+                        <div>
+                            <input type="password" name="pswd" placeholder="Password" >
+                        </div>			
+                        <input type="submit" class="button" value="Login">
+                        <a >forgot your password?</a>
+                    </form>
+                </div>
+        </div>
+    </div>
+    </div>

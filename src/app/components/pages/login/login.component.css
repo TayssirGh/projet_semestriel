@@ -1,0 +1,132 @@
+.centerERR {
+  display: flex;
+  justify-content: center;
+  font-size: x-small;
+  padding: -20px;
+}
+.classCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9%;
+}
+.bgg{
+
+    width: 100%;
+	height: 120vh;
+	background-image: linear-gradient(to bottom, #242d4d, #7b6981, #C8BED3);;
+}
+.main{
+	width: 350px;
+	height: 585px;
+	overflow: hidden;
+	border-radius: 30px;
+	box-shadow: 2px 2px 5px #1f1f1f;
+}
+.pt{
+	padding-top: 20px;
+}
+#chk{
+	display: none;
+}
+.signup{
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.select{
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+	
+}
+select{
+	width: 75%;
+	height: 40px;
+	background: #e0dede;
+	border-radius: 5px;
+	color: #000;
+	border: none;
+}
+
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #73567c;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #C8BED3;
+}
+.login{
+	height: 480px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #765F7D;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-580px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+input.ng-invalid.ng-touched{
+    border: rgb(223, 54, 54) 1px solid;
+    animation: shake 0.2s 0.1s;
+}
+@keyframes shake{
+    25%{
+        translate: 6px 0;
+    }
+    50%{
+        translate: -6px 0;
+    }
+    75%{
+        translate: 6px 0;
+    }
+}
+a{
+	display: flex;
+	justify-content: center;
+	color: #73567c;
+	cursor: pointer;
+}
