@@ -1,6 +1,6 @@
-<html>
 
-<body>
+
+
 
     <div class="main-wrapper">
 
@@ -9,9 +9,9 @@
 
       <div class="form-wrapper">
                 <div class="image-wrapper">
-             <img src="assets/raise-form.png" alt="image">
+                  <img src="assets/raise-form.png" alt="">
       </div>
-      <form >
+      <form #f="ngForm" >
         <h2 class="hello">Welcome to StartBoost!</h2> <br>
         <p>Join our platform for innovative startups by filling out the form below and start boosting your business today.</p>
 
@@ -19,6 +19,7 @@
           <div class="mb-5">
             <label  for="legal-name" class="form-label"> Legal name of company </label>
             <input
+             (change)="log(legalname)"
               required
               ngModel
               #legalname="ngModel"
@@ -313,14 +314,15 @@
              </div>
           </div>
           <div class="mb-5">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submit</button>
           </div>
+
 
         </form>
       </div>
     </div>
 
-  </body>
-</html>
+
+
 
 

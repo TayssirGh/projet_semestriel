@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-startup.component.scss']
 })
 export class FormStartupComponent {
+ log(x){
+  console.log(x)
+
+  };
+
 
 }

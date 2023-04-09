@@ -58,24 +58,32 @@ body {
   resize: none;
 }
 .form-input:focus {
-  border-color: #6a64f1;
+  border-color: #3498db;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
 
 .btn {
   text-align: center;
-  font-size: 16px;
   border-radius: 6px;
   padding: 14px 32px;
-  border: none;
-  font-weight: 600;
-  background-color: #6a64f1;
-  color: white;
   width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  transition: 0.5s;
+  background: #3498db;
+  color: #fff;
+  border: #3498db;
   cursor: pointer;
 }
 .btn:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  background: #4aa3df;
+  border: #4aa3df;
 }
 
 .mx-3 {
@@ -96,9 +104,9 @@ body {
   width: 100%;
 }
 h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  color: #484848;
+  margin-bottom: 50px;
+  font-size: 24px;
 }
 @media (min-width: 540px) {
   .sm\:w-half {
@@ -116,13 +124,14 @@ h2 {
   border-color: #dc3545;
 }
 .ng-valid.ng-touched {
-  border-color: #29de1f;
+  border-color: #7EBF8B;
 }
 .hello {
-  font-size: 2em;
-  text-align: center;
-  position: relative;
-  color: #2a0d64;
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: black;
 }
 p{
 

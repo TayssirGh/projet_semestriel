@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RaisePageComponent } from './raise-page.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { formStartupModule } from '../form-startup/formStartup.module';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -11,7 +13,9 @@ import { CommonModule } from '@angular/common';
       RaisePageRoutingModule,
        ReactiveFormsModule,
        CommonModule,
-       FormsModule
+       FormsModule,
+       formStartupModule,
+       MatButtonModule
 
   ],
   declarations: [ RaisePageComponent],
