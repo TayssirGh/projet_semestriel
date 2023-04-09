@@ -5,7 +5,7 @@ a{
     cursor: pointer;
 }
 .footer{
-    background:#dfdae4;
+    background:#e7ebf3;
     padding:30px 0px;
    // font-family: 'Play', sans-serif;
     text-align:center;
@@ -22,7 +22,7 @@ a{
         justify-content: space-around;
     }
 
-    .footer .row{
+    .footer .icons{
     width:100%;
     margin:1% 0%;
     padding:0.6% 0%;
@@ -30,26 +30,26 @@ a{
     font-size:0.8em;
     }
     
-    .footer .row a{
+    .footer .icons a{
     text-decoration:none;
     color:rgb(26, 26, 26);
     transition:0.5s;
     }
     
-    .footer .row a:hover{
-    color:#736080;
+    .footer .icons a:hover{
+    color:#3498db;
     }
     
-    .footer .row ul{
+    .footer .icons ul{
     width:100%;
     }
     
-    .footer .row ul li{
+    .footer .icons ul li{
     display:inline-block;
     margin:0px 30px;
     }
     
-    .footer .row a i{
+    .footer .icons a i{
     font-size:2em;
     margin:0% 1%;
     }
@@ -59,12 +59,12 @@ a{
     text-align:left;
     padding:5%;
     }
-    .footer .row ul li{
+    .footer .icons ul li{
     display:block;
     margin:10px 0px;
     text-align:left;
     }
-    .footer .row a i{
+    .footer .icons a i{
     margin:0% 3%;
     }
     }

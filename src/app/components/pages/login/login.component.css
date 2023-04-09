@@ -14,14 +14,14 @@
 
     width: 100%;
 	height: 120vh;
-	background-image: linear-gradient(to bottom, #242d4d, #7b6981, #C8BED3);;
+	background-image: linear-gradient(-45deg, #ffffff, #d3e0ee);;
 }
 .main{
 	width: 350px;
 	height: 585px;
 	overflow: hidden;
 	border-radius: 30px;
-	box-shadow: 2px 2px 5px #1f1f1f;
+	box-shadow: 2px 2px 4px #1f1f1f;
 }
 .pt{
 	padding-top: 20px;
@@ -33,7 +33,7 @@
 	height: 100%;
 }
 label{
-	color: #fff;
+	color: #3498db;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -47,7 +47,15 @@ label{
 	margin: 20px;
 	
 }
-select{
+select {
+	width: 85%;
+	height: 40px;
+	background: #e0dede;
+	border-radius: 5px;
+	color: #000;
+	border: none;
+}
+.input{
 	width: 75%;
 	height: 40px;
 	background: #e0dede;
@@ -75,7 +83,7 @@ input{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #73567c;
+	background: #3498db;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -96,7 +104,7 @@ button:hover{
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #765F7D;
+	color: #3498db;
 	transform: scale(.6);
 }
 
@@ -127,6 +135,6 @@ input.ng-invalid.ng-touched{
 a{
 	display: flex;
 	justify-content: center;
-	color: #73567c;
+	color: #3498db;
 	cursor: pointer;
 }

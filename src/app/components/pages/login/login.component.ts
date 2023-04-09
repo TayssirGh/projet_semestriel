@@ -8,6 +8,7 @@ import { PasswordValidators } from './password.validators';
 })
 export class LoginComponent implements OnInit {
   reactiveForm : FormGroup;
+  loginForm : FormGroup;
   ngOnInit() {
     this.reactiveForm = new FormGroup({
       username : new FormControl(null, [
@@ -30,14 +31,21 @@ export class LoginComponent implements OnInit {
     },{
       validators: PasswordValidators.confirmPass,
     });
+    this.loginForm = new FormGroup({
+      emailS : new FormControl(null, [Validators.required,]),
+      passwordS : new FormControl(null, [Validators.required,])
+    })
   }
   get username() { return this.reactiveForm.get('username'); }
   get email() { return this.reactiveForm.get('email'); }
   get password() { return this.reactiveForm.get('password'); }
   get confirmPassword() { return this.reactiveForm.get('confirmPassword'); }
   get status() { return this.reactiveForm.get('status'); }
-  onSubmit() {
-    console.log(this.reactiveForm);
+  get loginEmail() { return this.loginForm.get('emailS'); }
+  get loginPassword() { return this.loginForm.get('passwordS'); }
+  
+  onSubmit(form : FormGroup) {
+    console.log(form);
   }
 
 

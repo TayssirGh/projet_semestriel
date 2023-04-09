@@ -3,16 +3,17 @@ ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
+	justify-content: space-between;
     li{
         padding: 0 1.2rem;
         a{
             text-decoration: none;
-            color: #e5e3e9;
+            color: #000;
             font-size: 18px;
             font-weight: 600;
             font-family:   'Archivo', sans-serif;
             &:hover{
-                color: #73567c;
+                color: #3498db;
                 text-decoration: none;
             }
         }
@@ -22,9 +23,9 @@ a{
     cursor: pointer;
 }
 
-.nav-links{
+.navigation-links{
 
-    border-radius: 10px;
+   
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -32,15 +33,16 @@ a{
     align-items: center;
     padding: 0 2rem;
     height: 9vh;
+	width: 100%;
     border: none;
     box-shadow:   0px 0px .7px #080708;
     position: fixed ;
-    width: 95.7%;
+    width: 100%;
 	//background-color: #dfdae4;
    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
-$bgColor: rgb(134, 65, 171);
+$bgColor: #3498db;
 $textHoverColor: white;
 $debug: false;
 button {
