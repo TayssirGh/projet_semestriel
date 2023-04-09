@@ -14,7 +14,7 @@
 
     width: 100%;
 	height: 120vh;
-	background-image: linear-gradient(-45deg, #ffffff, #d3e0ee);;
+	background-image: linear-gradient(-45deg, #ffffff, #c7d2de);;
 }
 .main{
 	width: 350px;
@@ -50,7 +50,7 @@ label{
 select {
 	width: 85%;
 	height: 40px;
-	background: #e0dede;
+	background: #fff;
 	border-radius: 5px;
 	color: #000;
 	border: none;
@@ -58,16 +58,24 @@ select {
 .input{
 	width: 75%;
 	height: 40px;
-	background: #e0dede;
+	background: #fff;
 	border-radius: 5px;
 	color: #000;
 	border: none;
+}
+.inputb{
+	width: 75%;
+	height: 40px;
+	background: #fff;
+	border-radius: 5px;
+	color: #000;
+	border: 1px solid #000;
 }
 
 input{
 	width: 60%;
 	height: 20px;
-	background: #e0dede;
+	background: #fff;
 	justify-content: center;
 	display: flex;
 	margin: 20px auto;
@@ -98,7 +106,7 @@ button:hover{
 }
 .login{
 	height: 480px;
-	background: #eee;
+	background: #fff;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
