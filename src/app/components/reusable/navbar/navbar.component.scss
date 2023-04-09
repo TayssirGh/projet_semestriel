@@ -23,7 +23,7 @@ a{
 }
 
 .nav-links{
-    
+
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -49,55 +49,55 @@ button {
 	position: relative;
 	z-index: 1;
 	overflow: if($debug, unset, hidden);
-	
+
 	text-decoration: none;
-	
+
 	font-family: sans-serif;
 	font-weight: 600;
 	font-size: 16px;
 	padding: 10px;
-	
-	
+
+
 	color: $bgColor;
-	
+
 	border: 2.5px solid $bgColor;
 	border-radius: calc(0.75em + 0.5em + 0.15em);
-	
+
 	transition: 2s;
-	
+
 	&:before,
 	&:after {
 		content: '';
 		position: absolute;
 		top: -1.5em;
-		
+
 		z-index: -1;
-		
+
 		width: 200%;
 		aspect-ratio: 1;
-		
+
 		border: if($debug, inherit, none);
 		border-radius: 40%;
-		
+
 		background-color: rgba($bgColor, 0.25);
-		
+
 		transition: 2s;
 	}
-	
+
 	&:before {
 		left: -80%;
 		transform: translate3d(0, 5em, 0) rotate(-340deg);
 	}
-	
+
 	&:after {
 		right: -80%;
 		transform: translate3d(0, 5em, 0) rotate(390deg);
 	}
-	
+
 	&:hover,
 	&:focus {
 		color: $textHoverColor;
-		
+
 		&:before,
 		&:after {
 			transform: none;
