@@ -14,7 +14,7 @@
 
     width: 100%;
 	height: 120vh;
-	background-image: linear-gradient(-45deg, #ffffff, #c7d2de);;
+	background-image: linear-gradient(45deg, #acc0d5, #fff);;
 }
 .main{
 	width: 350px;
