@@ -13,24 +13,29 @@ body {
   padding-top: 12px;
 }
 .main-wrapper {
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 48px;
   flex-wrap: wrap;
 }
-.image-wrapper{
-  align-self:start ;
+.taswira{
   width: 100%;
-
+  max-width: 400px;
+  height: auto;
 }
+// .bgi{
+//   background-image: url("/assets/raise-form.png");
+//   background-position: center;
+// }
 
 .form-wrapper {
   align-items: flex-start;
   margin: 0 auto;
   max-width: 550px;
   width: 100%;
-  background: white;
+  // background: white;
 }
 .form-label {
   display: block;
@@ -127,6 +132,7 @@ h2 {
   border-color: #7EBF8B;
 }
 .hello {
+  padding-top: 5%;
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
