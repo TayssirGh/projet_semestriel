@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200&display=swap');
+.cont{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+h1{
+    font-size: 4em;
+    font-weight: 700;
+    color: #347adb;
+    text-align: center;
+    margin: 3%;
+    padding: 3%;
+    line-height: .8em;
+    font-family: 'Archivo', sans-serif;
+
+}
+p{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    line-height: .9em;
+    font-family: 'Archivo', sans-serif;
+}
+.btn{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Archivo', sans-serif;
+}
+.btn:hover{
+    background-color: white;
+    color: #2c7db0;
+}
+.classCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bgc{
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background-image: radial-gradient(#3498db 0.6px, #fff 0.6px);
+    background-size: 12px 12px;
+    
+
+}
+.section{ 
+    position: relative; 
+    min-height: 400px;
+    padding: 300px 25vw;
+}

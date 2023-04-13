@@ -41,6 +41,7 @@ a{
 	//background-color: #dfdae4;
    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+	z-index: 100;
 }
 $bgColor: #3498db;
 $textHoverColor: white;

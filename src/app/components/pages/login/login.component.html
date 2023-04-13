@@ -44,8 +44,10 @@
                                 <option value="raiser">Raiser</option>
                                 <option value="investor">Investor</option>
                             </select>
+                        </div >
+                        <div>
+                         <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid" >
                         </div>
-                        <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid" >
                     </form>
                 </div>
     
