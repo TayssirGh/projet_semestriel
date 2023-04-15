@@ -7,7 +7,8 @@ import { RouterModule } from '@angular/router';
     { path : 'login', loadChildren: () => import('./components/pages/login/login.module').then(m => m.LoginModule) },
     { path : 'formStartup', loadChildren: () => import('./components/pages/form-startup/formStartup.module').then(m => m.formStartupModule) },
     { path : 'raisePage', loadChildren: () => import('./components/pages/raise-page/raise-page.module').then(m => m.RaisePageModule) },
-    { path : 'invest', loadChildren: () => import('./components/pages/invest/invest.module').then(m => m.investModule) }
+    { path : 'invest', loadChildren: () => import('./components/pages/invest/invest.module').then(m => m.InvestModule) },
+    { path : '', loadChildren: () => import('./components/pages/landing/landing.module').then(m => m.LandingModule) },
   ])
 ],
   exports: [RouterModule]

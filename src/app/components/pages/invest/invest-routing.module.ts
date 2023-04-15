@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
-import { InvestComponent} from './invest.component';
+import { InvestComponent } from './invest.component';
+
 @NgModule({
   imports: [
       RouterModule.forChild([
@@ -8,4 +9,4 @@ import { InvestComponent} from './invest.component';
       ])],
       exports :[RouterModule]
 })
-export class investRoutingModule{}
+export class InvestRoutingModule{}

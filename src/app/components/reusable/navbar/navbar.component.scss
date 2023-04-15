@@ -13,7 +13,7 @@ ul{
             font-weight: 600;
             font-family:   'Archivo', sans-serif;
             &:hover{
-                color: #3498db;
+                color: #00bfd8;
                 text-decoration: none;
             }
         }
@@ -43,7 +43,7 @@ a{
     backdrop-filter: blur(10px);
 	z-index: 100;
 }
-$bgColor: #3498db;
+$bgColor: #00bfd8;
 $textHoverColor: white;
 $debug: false;
 button {
