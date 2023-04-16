@@ -7,47 +7,50 @@
                     <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm)" >
                         
                         <label for="chk" aria-hidden="true">Sign up</label>
-                        <div>
-                            <input type="text" placeholder="Username" formControlName="username" class="input">
-                            <div *ngIf="username.touched && username.invalid" class="centerERR">
-                                <mat-error *ngIf="username.errors?.['required']">This field is required.</mat-error> 
-                                <mat-error *ngIf="username.errors?.['minlength']">Username must be at least 3 characters long.</mat-error>
+                        <div class="fx">
+                            <div>
+                                <input type="text" placeholder="Username" formControlName="username" class="input">
+                                <div *ngIf="username.touched && username.invalid" class="centerERR">
+                                    <mat-error *ngIf="username.errors?.['required']">This field is required.</mat-error> 
+                                    <mat-error *ngIf="username.errors?.['minlength']">Username must be at least 3 characters long.</mat-error>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="email"  placeholder="Email" formControlName="email" class="input">
+                                <div *ngIf="email.touched && email.invalid" class="centerERR">
+                                    <mat-error *ngIf="email.errors?.['required']">This field is required.</mat-error> 
+                                    <mat-error *ngIf="email.errors?.['email']">make sure to use a valid email format.</mat-error>
+                                </div> 
+                            </div>
+                            <div>
+                                <input type="password" placeholder="Password" formControlName="password" class="input">
+                                <div *ngIf="password.touched && password.invalid" class="centerERR">
+                                    <mat-error *ngIf="password.errors?.['required']">This field is required.</mat-error>
+                                    <mat-error *ngIf="password.errors?.['pattern']">Password must be 8+ characters with uppercase, lowercase, and numbers.</mat-error>
+                                    <mat-error *ngIf="password.errors?.['maxlength']">Password should not exceed 16 characters. </mat-error>
+                                </div> 
+                             </div>
+                            <div>
+                                <input type="password"  placeholder="Confirm password" formControlName="confirmPassword" class="input">
+                                <div *ngIf="confirmPassword.touched && confirmPassword.invalid" class="centerERR">
+                                    <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required.</mat-error> 
+                                </div>
+                                <mat-error *ngIf="!confirmPassword.errors?.['required'] && reactiveForm.invalid && reactiveForm.errors?.['confirmPass'] && confirmPassword.touched" class="centerERR">
+                                    the passwords do not match.
+                                </mat-error>
+                                
+                            </div>
+                            <div class="select" >
+                                <select formControlName="status">
+                                    <option value="raiser">Raiser</option>
+                                    <option value="investor">Investor</option>
+                                </select>
+                            </div >
+                            <div>
+                             <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid" >
                             </div>
                         </div>
-                        <div>
-                            <input type="email"  placeholder="Email" formControlName="email" class="input">
-                            <div *ngIf="email.touched && email.invalid" class="centerERR">
-                                <mat-error *ngIf="email.errors?.['required']">This field is required.</mat-error> 
-                                <mat-error *ngIf="email.errors?.['email']">make sure to use a valid email format.</mat-error>
-                            </div> 
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Password" formControlName="password" class="input">
-                            <div *ngIf="password.touched && password.invalid" class="centerERR">
-                                <mat-error *ngIf="password.errors?.['required']">This field is required.</mat-error>
-                                <mat-error *ngIf="password.errors?.['pattern']">Password must be 8+ characters with uppercase, lowercase, and numbers.</mat-error>
-                                <mat-error *ngIf="password.errors?.['maxlength']">Password should not exceed 16 characters. </mat-error>
-                            </div> 
-                         </div>
-                        <div>
-                            <input type="password"  placeholder="Confirm password" formControlName="confirmPassword" class="input">
-                            <div *ngIf="confirmPassword.touched && confirmPassword.invalid" class="centerERR">
-                                <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required.</mat-error> 
-                            </div>
-                            <mat-error *ngIf="!confirmPassword.errors?.['required'] && reactiveForm.invalid && reactiveForm.errors?.['confirmPass'] && confirmPassword.touched" class="centerERR">
-                                the passwords do not match.
-                            </mat-error>
-                            
-                        </div>
-                        <div class="select" >
-                            <select formControlName="status">
-                                <option value="raiser">Raiser</option>
-                                <option value="investor">Investor</option>
-                            </select>
-                        </div >
-                        <div>
-                         <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid" >
-                        </div>
+                        
                     </form>
                 </div>
     

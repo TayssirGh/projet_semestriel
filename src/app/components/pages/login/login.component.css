@@ -4,21 +4,26 @@
   font-size: x-small;
   padding: -20px;
 }
+.fx{
+	display: flex;
+	flex-direction: column;
+}
 .classCenter {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 6%;
+  padding-top: 10%;
+  height: 130vh;
+  padding-bottom: 10%;
 }
 .bgg{
 
-    width: 100%;
-	height: 120vh;
-	background-image: linear-gradient(45deg, #E0F3F6, #fff);
+	background-image: url("../../../../assets/login-background.jpg") ;
+	background-size: cover;
 }
 .main{
-	width: 350px;
-	height: 600px;
+	width: 370px;
+	height: 700px;
 	overflow: hidden;
 	border-radius: 30px;
 	box-shadow: 2px 2px 4px #1f1f1f;
@@ -33,7 +38,7 @@
 	height: 100%;
 }
 label{
-	color: #00bfd8;
+	color: #000;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -53,7 +58,7 @@ select {
 	background: #fff;
 	border-radius: 5px;
 	color: #000;
-	border: none;
+	border: #000 1px solid;
 }
 .input{
 	width: 75%;
@@ -61,7 +66,7 @@ select {
 	background: #fff;
 	border-radius: 5px;
 	color: #000;
-	border: none;
+	border: #000 1px solid;
 }
 .inputb{
 	width: 75%;
@@ -80,9 +85,10 @@ input{
 	display: flex;
 	margin: 20px auto;
 	padding: 10px;
-	border: none;
+	border: solid 1px #000;
 	outline: none;
 	border-radius: 5px;
+	
 }
 .button{
 	width: 60%;
@@ -106,18 +112,18 @@ button:hover{
 }
 .login{
 	height: 600px;
-	background: #fff;
+	background: #F8FCFD;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #00bfd8;
+	color: #000;
 	transform: scale(.6);
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-650px);
+	transform: translateY(-698px);
 }
 #chk:checked ~ .login label{
 	transform: scale(1);	
