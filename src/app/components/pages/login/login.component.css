@@ -114,22 +114,22 @@ button:hover{
 	height: 600px;
 	background: #F8FCFD;
 	border-radius: 60% / 10%;
-	transform: translateY(-180px);
+	transform: translateY(-690px);
 	transition: .8s ease-in-out;
 }
 .login label{
 	color: #000;
-	transform: scale(.6);
+	transform: scale(1);
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-698px);
+	transform: translateY(-180px);
 }
 #chk:checked ~ .login label{
-	transform: scale(1);	
+	transform: scale(.6);	
 }
 #chk:checked ~ .signup label{
-	transform: scale(.6);
+	transform: scale(1);
 }
 input.ng-invalid.ng-touched{
     border: rgb(223, 54, 54) 1px solid;

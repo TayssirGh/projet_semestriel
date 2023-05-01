@@ -43,70 +43,90 @@ a{
     backdrop-filter: blur(10px);
 	z-index: 100;
 }
-$bgColor: #00bfd8;
-$textHoverColor: white;
-$debug: false;
-button {
-    cursor: pointer;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	overflow: if($debug, unset, hidden);
-
-	text-decoration: none;
-
-	font-family: sans-serif;
-	font-weight: 600;
+.btn-get-started {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
 	font-size: 16px;
-	padding: 10px;
+	letter-spacing: 1px;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 50px;
+	transition: 0.5s;
+	color: #fff;
+	background : #00bfd8;
+	text-decoration: none;
+	border: 2px solid #00bfd8;
+	cursor: pointer;
+  }
+  .btn-get-started:hover {
+	color: #00bfd8;
+	background: #fff;
+  
+  }
+// $bgColor: #00bfd8;
+// $textHoverColor: white;
+// $debug: false;
+// button {
+//     cursor: pointer;
+// 	display: inline-block;
+// 	position: relative;
+// 	z-index: 1;
+// 	overflow: if($debug, unset, hidden);
+
+// 	text-decoration: none;
+
+// 	font-family: sans-serif;
+// 	font-weight: 600;
+// 	font-size: 16px;
+// 	padding: 10px;
 
 
-	color: $bgColor;
+// 	color: $bgColor;
 
-	border: 2.5px solid $bgColor;
-	border-radius: calc(0.75em + 0.5em + 0.15em);
+// 	border: 2.5px solid $bgColor;
+// 	border-radius: calc(0.75em + 0.5em + 0.15em);
 
-	transition: 2s;
+// 	transition: 2s;
 
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		top: -1.5em;
+// 	&:before,
+// 	&:after {
+// 		content: '';
+// 		position: absolute;
+// 		top: -1.5em;
 
-		z-index: -1;
+// 		z-index: -1;
 
-		width: 200%;
-		aspect-ratio: 1;
+// 		width: 200%;
+// 		aspect-ratio: 1;
 
-		border: if($debug, inherit, none);
-		border-radius: 40%;
+// 		border: if($debug, inherit, none);
+// 		border-radius: 40%;
 
-		background-color: rgba($bgColor, 0.25);
+// 		background-color: rgba($bgColor, 0.25);
 
-		transition: 2s;
-	}
+// 		transition: 2s;
+// 	}
 
-	&:before {
-		left: -80%;
-		transform: translate3d(0, 5em, 0) rotate(-340deg);
-	}
+// 	&:before {
+// 		left: -80%;
+// 		transform: translate3d(0, 5em, 0) rotate(-340deg);
+// 	}
 
-	&:after {
-		right: -80%;
-		transform: translate3d(0, 5em, 0) rotate(390deg);
-	}
+// 	&:after {
+// 		right: -80%;
+// 		transform: translate3d(0, 5em, 0) rotate(390deg);
+// 	}
 
-	&:hover,
-	&:focus {
-		color: $textHoverColor;
+// 	&:hover,
+// 	&:focus {
+// 		color: $textHoverColor;
 
-		&:before,
-		&:after {
-			transform: none;
-			background-color: rgba($bgColor, 0.75);
-		}
-	}
-}
+// 		&:before,
+// 		&:after {
+// 			transform: none;
+// 			background-color: rgba($bgColor, 0.75);
+// 		}
+// 	}
+// }
 
 
