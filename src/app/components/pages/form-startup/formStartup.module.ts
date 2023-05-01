@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormStartupComponent } from './form-startup.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {  HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -11,10 +13,13 @@ import { CommonModule } from '@angular/common';
       FormStartupRoutingModule,
        ReactiveFormsModule,
        CommonModule,
-       FormsModule
+       FormsModule,
+       HttpClientModule
+
 
   ],
   declarations: [ FormStartupComponent],
+
 
 })
 export class formStartupModule { }

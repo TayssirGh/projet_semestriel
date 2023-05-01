@@ -7,26 +7,24 @@
         <div class="taswira">
           <img src="assets/slider-img.png" alt="">
        </div>
-      <form #f="ngForm" >
+      <form #f="ngForm" (ngSubmit)="createStartup(f.value)">
 
         <h2 class="hello">Welcome to StartBoost!</h2> <br>
         <p>Join our platform for innovative startups by filling out the form below and start boosting your business today.</p>
 
           <h2>Company Information :</h2>
           <div class="mb-5">
-            <label  for="legal-name" class="form-label"> Legal name of company </label>
+            <label  for="name" class="form-label"> Legal name of company </label>
             <input
-             (change)="log(legalname)"
               required
-              ngModel
-              #legalname="ngModel"
+            ngModel
+              #name="ngModel"
               type="text"
-              name="legalName"
-              id="legal-name"
+              name="name"
               placeholder="Legal name of company"
               class="form-input"
             />
-            <div class="alert" *ngIf="legalname.touched && !legalname.valid">
+            <div class="alert" *ngIf="name.touched && !name.valid">
               this field is required.
              </div>
           </div>
@@ -47,13 +45,13 @@
              </div>
           </div>
           <div class="mb-5">
-            <label for="mailing-address" class="form-label"> Mailing address (if different) </label>
+            <label for="industry" class="form-label"> industry  </label>
             <input
-
+              ngModel
+              #industry="ngModel"
               type="text"
-              name="mailing-address"
-              id="mailing-address"
-              placeholder="Mailing address"
+              name="industry"
+              placeholder="industry"
               class="form-input"
             />
 
@@ -75,18 +73,18 @@
              </div>
           </div>
           <div class="mb-5">
-            <label for="email" class="form-label"> Email address </label>
+            <label for="imageUrl" class="form-label"> imageUrl address </label>
             <input
             required
               ngModel
-              #email="ngModel"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email address"
+              #imageUrl="ngModel"
+              type="text"
+              name="imageUrl"
+              id="imageUrl"
+              placeholder="imageUrl "
               class="form-input"
             />
-            <div class="alert" *ngIf="email.touched && !email.valid">
+            <div class="alert" *ngIf="imageUrl.touched && !imageUrl.valid">
               this field is required.
              </div>
           </div>
@@ -121,7 +119,7 @@
              Brief description of the company and its products or services
              </label>
             <textarea
-            required
+            require
               ngModel
               #description="ngModel"
               name="description"
@@ -311,7 +309,7 @@
              </div>
           </div>
           <div class="mb-5">
-            <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submit</button>
+            <button type="submit"  class="btn btn-primary" >Submit</button>
           </div>
 
 

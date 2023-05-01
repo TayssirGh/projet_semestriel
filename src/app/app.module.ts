@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/reusable/navbar/navbar.component';
 
 import { FooterComponent } from './components/reusable/footer/footer.component';
+import { GetterService } from './services/getter/getter.service';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,11 @@ import { FooterComponent } from './components/reusable/footer/footer.component';
     AppRoutingModule,
 
 
+
   ],
-  providers: [],
+  providers: [
+    GetterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

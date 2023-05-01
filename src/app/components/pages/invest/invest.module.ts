@@ -1,21 +1,24 @@
 import { NgModule } from "@angular/core";
 import { InvestRoutingModule } from "./invest-routing.module";
 import { InvestComponent } from "./invest.component";
-import { MatCardModule} from '@angular/material/card';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { MatButtonModule } from "@angular/material/button";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatChipsModule} from '@angular/material/chips';
+import { HttpClientModule } from "@angular/common/http";
+
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
         InvestRoutingModule,
-        MatCardModule,
-        MatToolbarModule,
-        MatButtonModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        MatGridListModule,
+        MatChipsModule,
+        HttpClientModule,
+        CommonModule
 
     ],
     declarations: [ InvestComponent],
-    
+
 })
 export class InvestModule { }
