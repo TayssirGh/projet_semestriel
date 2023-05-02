@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/reusable/navbar/navbar.component';
 
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { GetterService } from './services/getter/getter.service';
+import { PostUserService } from './services/auth/post/post-user.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GetterService } from './services/getter/getter.service';
 
   ],
   providers: [
-    GetterService
+    GetterService, 
+    PostUserService
   ],
   bootstrap: [AppComponent]
 })

@@ -55,7 +55,7 @@
                 </div>
     
                 <div class="login">
-                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit(loginForm.value)">
                         <label for="chk" aria-hidden="true" class="pt">Login</label>
                         <div>
                             <input type="email"  name="email" placeholder="Email" class="inputb" formControlName="emailS">
