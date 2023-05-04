@@ -16,7 +16,7 @@
 
 .containerOne {
   width: 280px;
-  background-color: aqua;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -24,14 +24,14 @@
 }
 
 .containerTwo {
-  background-color: brown;
+
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
 
 .containerThree {
-  background-color: bisque;
+
 }
 
 
@@ -66,5 +66,20 @@
 .img{
   width :fit-content
 
+}
+.carte button {
+	display: inline-block;
+	padding: 1rem 2rem 1rem 2rem;
+	 border: 0.125rem solid #00bfd8;
+
+	border-radius: 2rem;
+	font: 700 0.75rem/0 "Raleway", sans-serif;
+
+	transition: all 0.2s;
+  background-color: transparent;
+	color: #00bfd8;
+	text-decoration: none;
+  width: 90px;
+  text-align: center;
 }
 
