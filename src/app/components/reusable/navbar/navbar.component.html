@@ -11,8 +11,11 @@
                 <li><a>Marketplace</a></li>
             </ul>
 
-            <div>
-             <button class="btn-get-started scrollto" routerLink="../login">Connect</button>
+            <div *ngIf="!test()">
+             <button class="btn-get-started scrollto" routerLink="../login" (click)="checkAuth()">Connect</button>
+            </div>
+            <div *ngIf="test()">
+                <button class="btn-get-started scrollto" routerLink="../login" >Logout</button>
             </div>
         </div>
     </nav>

@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="bgg ">
     <div class="classCenter">
         <div class="main">  	
             <input type="checkbox" id="chk" aria-hidden="true">
     
                 <div class="signup">
-                    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm)" >
+                    <form [formGroup]="reactiveForm" (ngSubmit)="onSignupSubmit()" >
                         
                         <label for="chk" aria-hidden="true">Sign up</label>
                         <div class="fx">
@@ -47,15 +49,18 @@
                                 </select>
                             </div >
                             <div>
-                             <input type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid" >
+                             <input *ngIf="!stest()" type="submit" class="button" value="Register" [disabled]="!reactiveForm.valid " >
                             </div>
+                            <i *ngIf="stest() && reactiveForm.valid" class="fa fa-arrow-right " routerLink="/dashboard"></i>
+
+                            <mat-error *ngIf="!stest() && reactiveForm.valid" class="centerERR">don't you already have an account?</mat-error>
                         </div>
                         
                     </form>
                 </div>
     
                 <div class="login">
-                    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit(loginForm.value)">
+                    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
                         <label for="chk" aria-hidden="true" class="pt">Login</label>
                         <div>
                             <input type="email"  name="email" placeholder="Email" class="inputb" formControlName="emailS">
@@ -63,8 +68,11 @@
                         <div>
                             <input type="password" name="pswd" placeholder="Password"  class="inputb" formControlName="passwordS">
                         </div>			
-                        <input type="submit" class="button" value="Login">
-                        <a>forgot your password?</a>
+                        <input *ngIf="!ltest()" type="submit" class="button" value="Login" [disabled]="!loginForm.valid">
+                        <i *ngIf="ltest() && loginForm.valid" class="fa fa-arrow-right" routerLink="/dashboard"></i>
+                        <mat-error *ngIf="!ltest() && loginForm.valid" class="centerERR">please verify your informations</mat-error>
+                        
+
                     </form>
                 </div>
         </div>

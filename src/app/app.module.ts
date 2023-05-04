@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/reusable/navbar/navbar.component';
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { GetterService } from './services/getter/getter.service';
 import { PostUserService } from './services/auth/post/post-user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,17 +19,20 @@ import { PostUserService } from './services/auth/post/post-user.service';
 
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule
 
 
   ],
   providers: [
     GetterService, 
-    PostUserService
+    PostUserService,
+    PostUserService, 
+    GetterService,
   ],
   bootstrap: [AppComponent]
 })

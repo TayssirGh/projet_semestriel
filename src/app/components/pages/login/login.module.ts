@@ -5,7 +5,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     imports: [
@@ -14,7 +13,6 @@ import { HttpClientModule } from "@angular/common/http";
         MatIconModule,
         ReactiveFormsModule,
         CommonModule,
-        HttpClientModule
     ],
     
     declarations: [ LoginComponent],

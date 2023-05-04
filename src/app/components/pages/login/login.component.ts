@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { PasswordValidators } from './password.validators';
-import { GetUserService } from 'src/app/services/auth/get/get-user.service';
 import { PostUserService } from 'src/app/services/auth/post/post-user.service';
 
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers : [GetUserService]
+  providers: [PostUserService]
 })
 export class LoginComponent implements OnInit {
-  constructor(private service : PostUserService){}
   reactiveForm : FormGroup;
   loginForm : FormGroup;
+  var  : number = 0;
+  vr : number = 0;
+  constructor(private postUserService : PostUserService){}
   ngOnInit() {
     this.reactiveForm = new FormGroup({
       username : new FormControl(null, [
@@ -51,12 +52,37 @@ export class LoginComponent implements OnInit {
   onSubmit(form : FormGroup) {
     console.log(form);
   }
-  onLoginSubmit(loginDto : {email : String, password: String}){
-    this.service.login(loginDto).subscribe(( response )=> {
-      console.log(response);
-       })
+  onLoginSubmit() {
+    const email = this.loginEmail.value;
+    const password = this.loginPassword.value;
+    this.postUserService.login(email, password).subscribe(
+      (response) =>{console.log(response)
+      this.var = response?1:2;}
+      
+    )
+  
+    
   }
-
+  ltest (){
+    return this.var ;
+  }
+  stest (){
+    return this.vr;
+  }
+  onSignupSubmit(){
+    const email = this.email.value;
+    const password = this.password.value;
+    const usename = this.username.value;
+    const status = this.status.value;
+    this.postUserService.signup(usename, email, password, status).subscribe(
+      (response) =>{console.log(response);
+      this.vr = response?1:2;
+      }
+        
+      
+    )
+    console.log(this.reactiveForm)
+  }
 
 
 
