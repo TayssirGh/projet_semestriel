@@ -5,7 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
 import { HttpClientModule } from "@angular/common/http";
-
+import {MatDialogModule} from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -15,7 +15,9 @@ import { CommonModule } from '@angular/common';
         MatGridListModule,
         MatChipsModule,
         HttpClientModule,
-        CommonModule
+        CommonModule,
+        MatDialogModule
+
 
     ],
     declarations: [ InvestComponent],

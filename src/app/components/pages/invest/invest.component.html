@@ -1,7 +1,7 @@
 
 
 
-<div>
+<div class="ct">
   <mat-grid-list cols="3"  rowHeight="500px" >
     <mat-grid-tile *ngFor="let post of posts" class="my-grid-tile">
 
@@ -12,19 +12,17 @@
     <mat-chip class="domain">{{post.industry}}</mat-chip>
   </div>
   <div class="containerTwo">
-   <img  src="assets/ENISo.svg.png" alt="startup" border="0">
+   <img  src="assets/ENISo.svg.png" alt="startup" >
   </div>
   <div class="containerThree">
   <div class="textPlaceholder">
-    <p>text</p>
-    <p>text</p>
-    <p>text</p>
+
 
   </div>
 
   <div class="buttonPlaceholder">
-    <button class="btn-solid-lg page-scroll"><span class="Classcenter">INVST</span></button>
-    <button class="btn-solid-lg page-scroll">INFO</button>
+    <a class="btn-solid-lg page-scroll" ><span class="classCenter" (click)="openDialog()">INVEST</span></a>
+    <a class="btn-solid-lg page-scroll"><span class="classCenter">INFO</span></a>
   </div>
 </div>
 </div>

@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
     { path : 'invest', loadChildren: () => import('./components/pages/invest/invest.module').then(m => m.InvestModule) },
     { path : '', loadChildren: () => import('./components/pages/landing/landing.module').then(m => m.LandingModule) },
     { path : 'dashboard', loadChildren: () => import('./components/pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
+    {path : 'payment', loadChildren:() =>import('./components/pages/payment/payment.module').then(m => m.PaymentModule)}
   ])
 ],
   exports: [RouterModule]

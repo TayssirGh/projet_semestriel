@@ -30,8 +30,9 @@
   margin-bottom: 10px;
 }
 
-.containerThree {
-
+.ct{
+  padding-top: 5%;
+  background: f9fafb;
 }
 
 
@@ -81,5 +82,32 @@
 	text-decoration: none;
   width: 90px;
   text-align: center;
+}
+.classenter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+.btn-solid-lg {
+	display: inline-block;
+	padding: 1rem 2rem 1em 2rem;
+	border: 0.125rem solid #00bfd8;
+	border-radius: 2rem;
+	background-color: #00bfd8;
+	color: #fff;
+	font: 700 0.75rem/0 "Raleway", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-lg:hover {
+	background-color: transparent;
+	color: #00bfd8;
+	text-decoration: none;
+}
+
+a{
+  cursor: pointer;
 }
 

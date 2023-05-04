@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
-
   ],
   imports: [
     BrowserModule,
@@ -29,9 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   providers: [
-    GetterService, 
+    GetterService,
     PostUserService,
-    PostUserService, 
+    PostUserService,
     GetterService,
   ],
   bootstrap: [AppComponent]
