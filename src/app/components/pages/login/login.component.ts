@@ -2,18 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { PasswordValidators } from './password.validators';
 import { PostUserService } from 'src/app/services/auth/post/post-user.service';
+import { GetUserService } from 'src/app/services/auth/get/get-user.service';
 
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [PostUserService]
+  providers: [PostUserService, GetUserService]
 })
 export class LoginComponent implements OnInit {
   reactiveForm : FormGroup;
   loginForm : FormGroup;
   var  : number = 0;
   vr : number = 0;
-  constructor(private postUserService : PostUserService){}
+  isAuthenticated : boolean;
+  
+  constructor(private postUserService : PostUserService, private getUserService : GetUserService){}
   ngOnInit() {
     this.reactiveForm = new FormGroup({
       username : new FormControl(null, [
@@ -82,6 +85,28 @@ export class LoginComponent implements OnInit {
       
     )
     console.log(this.reactiveForm)
+    this.getUserService.getAuth().subscribe(
+      (response) => {
+        console.log(response);
+        this.isAuthenticated = response[0].auth;
+        console.log(this.isAuthenticated)
+      },);
+      if (this.isAuthenticated) {
+
+      
+      } 
+  
+
+  }
+  checkAuth(){
+    return this.getUserService.getAuth().subscribe(
+      (response) => {
+        console.log(response);
+        this.isAuthenticated = response[0].auth;
+        console.log(this.isAuthenticated)
+      },
+      
+    );
   }
 
 

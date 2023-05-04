@@ -18,9 +18,12 @@ export class NavbarComponent {
         console.log(this.isAuthenticated)
       },
       
-    );;
+    );
   }
   test():boolean{
+    return this.isAuthenticated
+  }
+  getisAuthenticated(){
     return this.isAuthenticated
   }
 
