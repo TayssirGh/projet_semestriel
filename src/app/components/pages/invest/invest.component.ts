@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetterService } from 'src/app/services/getter/getter.service';
 
-import { MatDialog } from '@angular/material/dialog';
-import { PopupComponent } from '../popup/popup.component';
 
 @Component({
   selector: 'app-invest',
@@ -12,7 +10,7 @@ import { PopupComponent } from '../popup/popup.component';
 })
 export class InvestComponent implements OnInit{
   posts : any;
-  constructor(private service: GetterService, private dialogRef: MatDialog){}
+  constructor(private service: GetterService){}
   ngOnInit(): void {
     this.service.getCardInfo().subscribe((response) => {
       this.posts = response ;
@@ -23,9 +21,7 @@ export class InvestComponent implements OnInit{
   this.posts.push(post);
 
  }
- openDialog(){
-  this.dialogRef.open(PopupComponent);
- }
+ 
 
 
 }

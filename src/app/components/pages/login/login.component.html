@@ -69,7 +69,7 @@
                             <input type="password" name="pswd" placeholder="Password"  class="inputb" formControlName="passwordS">
                         </div>			
                         <input *ngIf="!ltest()" type="submit" class="button" value="Login" [disabled]="!loginForm.valid">
-                        <i *ngIf="ltest() && loginForm.valid" class="fa fa-arrow-right" routerLink="/dashboard" (click)="checkAuth()"></i>
+                        <i *ngIf="ltest() && loginForm.valid" class="fa fa-arrow-right" routerLink="/dashboard" ></i>
                         <mat-error *ngIf="!ltest() && loginForm.valid" class="centerERR">please verify your informations</mat-error>
                         
 

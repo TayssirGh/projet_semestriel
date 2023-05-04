@@ -63,6 +63,15 @@ a{
 	background: #fff;
   
   }
+  .fx{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .wallet{
+    display: flex;
+    padding-right: 20px;
+  }
 // $bgColor: #00bfd8;
 // $textHoverColor: white;
 // $debug: false;

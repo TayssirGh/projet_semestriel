@@ -85,29 +85,8 @@ export class LoginComponent implements OnInit {
       
     )
     console.log(this.reactiveForm)
-    this.getUserService.getAuth().subscribe(
-      (response) => {
-        console.log(response);
-        this.isAuthenticated = response[0].auth;
-        console.log(this.isAuthenticated)
-      },);
-      if (this.isAuthenticated) {
-
-      
-      } 
+  }
   
-
-  }
-  checkAuth(){
-    return this.getUserService.getAuth().subscribe(
-      (response) => {
-        console.log(response);
-        this.isAuthenticated = response[0].auth;
-        console.log(this.isAuthenticated)
-      },
-      
-    );
-  }
 
 
 

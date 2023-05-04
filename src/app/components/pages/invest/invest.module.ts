@@ -7,6 +7,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { HttpClientModule } from "@angular/common/http";
 import {MatDialogModule} from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
         MatChipsModule,
         HttpClientModule,
         CommonModule,
-        MatDialogModule
+        MatDialogModule,
+        FormsModule
 
 
     ],
